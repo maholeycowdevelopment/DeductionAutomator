@@ -36,7 +36,7 @@ namespace DeductionAutomator
       // Add application services.
       services.AddTransient<IEmailSender, EmailSender>();
 
-      services.AddSingleton<IDeductionItemService, FakeDeductionItemService>();
+      services.AddScoped<IDeductionItemService, DeductionItemService>();
 
       services.AddMvc();
     }
