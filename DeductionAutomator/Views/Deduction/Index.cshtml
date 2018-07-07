@@ -1,7 +1,7 @@
 @model DeductionViewModel
 
 @{
-  ViewData["Title"] = "Manage your employee deductions"
+  ViewData["Title"] = "Manage your employee deductions";
 }
 
 <div class="panel panel-default deduction-panel">
@@ -27,6 +27,6 @@
   </table>
 
   <div class="panel-footer add-item-form">
-    <!-- TODO: Add entry from -->
+    @await Html.PartialAsync("AddDeductionEntryPartial", new DeductionEntry())
   </div>
 </div>

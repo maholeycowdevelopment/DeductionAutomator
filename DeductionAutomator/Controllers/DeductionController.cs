@@ -31,5 +31,22 @@ namespace DeductionAutomator.Controllers
       // Pass the view to a model and render
       return View(model);
     }
+
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> AddDeductionEntry(DeductionEntry newEntry)
+    {
+      if (!ModelState.IsValid)
+      {
+        return RedirectToAction("Index");
+      }
+
+      var successful = await _deductionEntryService.AddDeductionEntryAsync(newEntry);
+      if (!successful)
+      {
+        return BadRequest("Could not add item.");
+      }
+
+      return RedirectToAction("Index");
+    }
   }
 }
