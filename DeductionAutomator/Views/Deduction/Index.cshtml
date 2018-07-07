@@ -1,0 +1,32 @@
+@model DeductionViewModel
+
+@{
+  ViewData["Title"] = "Manage your employee deductions"
+}
+
+<div class="panel panel-default deduction-panel">
+  <div class="panel-heading">@ViewData["Title"]</div>
+
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td><strong>Employee Name:</strong></td>
+        <td><strong>Deduction:</strong></td>
+        <td><strong>Dependents:</strong></td>
+      </tr>
+    </thead>
+
+    @foreach (var entry in Model.Deductions)
+    {
+      <tr>
+        <td>@entry.EmployeeName</td>
+        <td>@entry.YearlyDeduction</td>
+        <td>@entry.Dependents</td>
+      </tr>
+    }
+  </table>
+
+  <div class="panel-footer add-item-form">
+    <!-- TODO: Add entry from -->
+  </div>
+</div>
