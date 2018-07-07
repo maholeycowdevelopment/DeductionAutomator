@@ -14,5 +14,6 @@ namespace DeductionAutomator.Models
 
     public string Dependents { get; set; }
 
+    public string UserId { get; set; }
   }
 }

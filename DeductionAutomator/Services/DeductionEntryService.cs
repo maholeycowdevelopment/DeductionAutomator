@@ -17,7 +17,7 @@ namespace DeductionAutomator.Services
       _context = context;
     }
 
-    public async Task<DeductionEntry[]> GetDeductionEntriesAsync()
+    public async Task<DeductionEntry[]> GetDeductionEntriesAsync(ApplicationUser user)
     {
       return await _context.Deductions.ToArrayAsync();
     }

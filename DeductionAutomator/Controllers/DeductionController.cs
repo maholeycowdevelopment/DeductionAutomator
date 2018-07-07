@@ -4,23 +4,31 @@ using System.Linq;
 using System.Threading.Tasks;
 using DeductionAutomator.Models;
 using DeductionAutomator.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
 
 namespace DeductionAutomator.Controllers
 {
+  [Authorize]
   public class DeductionController : Controller
   {
     private readonly IDeductionEntryService _deductionEntryService;
+    private readonly UserManager<ApplicationUser> _userManager;
 
-    public DeductionController(IDeductionEntryService deductionEntryService)
+    public DeductionController(IDeductionEntryService deductionEntryService, UserManager<ApplicationUser> userManager)
     {
       _deductionEntryService = deductionEntryService;
+      _userManager = userManager;
     }
 
     public async Task<IActionResult> Index()
     {
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+
       // Get deduction entries from database
-      var deductions = await _deductionEntryService.GetDeductionEntriesAsync();
+      var deductions = await _deductionEntryService.GetDeductionEntriesAsync(currentUser);
 
       // Put entries into a model
       var model = new DeductionViewModel()

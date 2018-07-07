@@ -7,7 +7,7 @@ namespace DeductionAutomator.Services
 {
   public interface IDeductionEntryService
   {
-    Task<DeductionEntry[]> GetDeductionEntriesAsync();
+    Task<DeductionEntry[]> GetDeductionEntriesAsync(ApplicationUser user);
 
     Task<bool> AddDeductionEntryAsync(DeductionEntry newEntry);
   }
