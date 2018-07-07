@@ -19,13 +19,14 @@ namespace DeductionAutomator.Services
 
     public async Task<DeductionEntry[]> GetDeductionEntriesAsync(ApplicationUser user)
     {
-      return await _context.Deductions.ToArrayAsync();
+      return await _context.Deductions.Where(x => x.UserId == user.Id).ToArrayAsync();
     }
 
-    public async Task<bool> AddDeductionEntryAsync(DeductionEntry newEntry)
+    public async Task<bool> AddDeductionEntryAsync(DeductionEntry newEntry, ApplicationUser user)
     {
       newEntry.Id = Guid.NewGuid();
       newEntry.YearlyDeduction = CalculateEmployeeDeduction(newEntry.EmployeeName, newEntry.Dependents);
+      newEntry.UserId = user.Id;
 
       _context.Deductions.Add(newEntry);
 

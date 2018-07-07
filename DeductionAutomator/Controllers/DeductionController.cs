@@ -48,7 +48,10 @@ namespace DeductionAutomator.Controllers
         return RedirectToAction("Index");
       }
 
-      var successful = await _deductionEntryService.AddDeductionEntryAsync(newEntry);
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+
+      var successful = await _deductionEntryService.AddDeductionEntryAsync(newEntry, currentUser);
       if (!successful)
       {
         return BadRequest("Could not add item.");

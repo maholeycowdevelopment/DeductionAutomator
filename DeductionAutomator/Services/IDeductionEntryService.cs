@@ -9,6 +9,6 @@ namespace DeductionAutomator.Services
   {
     Task<DeductionEntry[]> GetDeductionEntriesAsync(ApplicationUser user);
 
-    Task<bool> AddDeductionEntryAsync(DeductionEntry newEntry);
+    Task<bool> AddDeductionEntryAsync(DeductionEntry newEntry, ApplicationUser user);
   }
 }
