@@ -1,0 +1,9 @@
+@model DeductionEntry
+
+<form asp-action="AddDeductionEntry" method="POST">
+  <label asp-for="EmployeeName">Employee Name:</label>
+  <input asp-for="EmployeeName">
+  <label asp-for="Dependents">Dependents:</label>
+  <input asp-for="Dependents">
+  <button type="submit">Add</button>
+</form>
