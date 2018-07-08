@@ -62,7 +62,7 @@ namespace DeductionAutomator
       {
         routes.MapRoute(
                   name: "default",
-                  template: "{controller=Home}/{action=Index}/{id?}");
+                  template: "{controller=Deduction}/{action=Index}/{id?}");
       });
     }
   }
