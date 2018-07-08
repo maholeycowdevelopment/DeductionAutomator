@@ -37,3 +37,34 @@
 div.deduction-panel {
   margin-top: 15px;
 }
+
+/* ----- CUSTOM HEADER ----- */
+.header-text {
+  font-size: 40px;
+}
+
+/* ----- CUSTOM BODY TEXT ----- */
+.info-text {
+  font-size: 24px;
+}
+
+/* ----- CUSTOM BUTTONS ----- */
+.ghost-button {
+  color: #e67e22;
+  border: 1px solid #e67e22;
+  border-radius: 150px;
+  padding: 10px 30px;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #cf6d17;
+  color: #fff;
+  text-decoration-line: none;
+}
+
+/* ---- GENERIC REUSABLE STYLES ----- */
+.centered-text {
+  text-align: center;
+}
