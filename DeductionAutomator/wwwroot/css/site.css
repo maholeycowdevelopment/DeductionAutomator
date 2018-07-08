@@ -16,11 +16,6 @@
   line-height: 1.4;
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-  width: 100%;
-}
-
 /* QR code generator */
 #qrCode {
   margin: 15px;
@@ -48,6 +43,10 @@ div.deduction-panel {
   font-size: 24px;
 }
 
+.body-text {
+  margin: 10px;
+}
+
 /* ----- CUSTOM BUTTONS ----- */
 .ghost-button {
   color: #e67e22;
@@ -73,4 +72,14 @@ div.deduction-panel {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.extra-margin-top {
+  margin-top: 40px;
+}
+
+/* ---- HOME PAGE STYLING ---- */
+#home-content {
+  max-width: 75%;
+  margin: auto;
 }
