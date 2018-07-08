@@ -63,6 +63,26 @@ div.deduction-panel {
   text-decoration-line: none;
 }
 
+.edit-button {
+  border-radius: 5%;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.delete-button {
+  border-radius: 5%;
+  background-color: #f44336;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+}
+
 /* ---- GENERIC REUSABLE STYLES ----- */
 .centered-text {
   text-align: center;
