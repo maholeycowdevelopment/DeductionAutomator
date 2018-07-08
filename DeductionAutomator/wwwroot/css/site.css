@@ -53,7 +53,7 @@ div.deduction-panel {
   color: #e67e22;
   border: 1px solid #e67e22;
   border-radius: 150px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   transition: background-color 0.2s, border 0.2s, color 0.2s;
 }
 
@@ -67,4 +67,10 @@ div.deduction-panel {
 /* ---- GENERIC REUSABLE STYLES ----- */
 .centered-text {
   text-align: center;
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
