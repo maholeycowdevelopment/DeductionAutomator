@@ -63,7 +63,8 @@ div.deduction-panel {
   text-decoration-line: none;
 }
 
-.edit-button {
+.edit-button,
+.edit-button:hover {
   border-radius: 5%;
   background-color: #4caf50;
   color: #fff;
@@ -73,7 +74,8 @@ div.deduction-panel {
   font-size: 16px;
 }
 
-.delete-button {
+.delete-button,
+.delete-button:hover {
   border-radius: 5%;
   background-color: #f44336;
   color: #fff;

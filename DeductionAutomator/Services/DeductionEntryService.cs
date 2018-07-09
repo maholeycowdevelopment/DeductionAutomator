@@ -35,6 +35,13 @@ namespace DeductionAutomator.Services
       return saveResult == 1;
     }
 
+    public async Task<bool> DeleteDeductionEntryAsync(DeductionEntry existingEntry, ApplicationUser user)
+    {
+      _context.Deductions.Remove(_context.Deductions.FirstOrDefault(x => (x.UserId == user.Id && x.Id == existingEntry.Id)));
+      var saveResult = await _context.SaveChangesAsync();
+      return saveResult == 1;
+    }
+
     private float CalculateEmployeeDeduction(string employeeName, string dependents)
     {
       float employeeDeduction = (employeeName.Trim()[0] == 'A') ? 900 : 1000;

@@ -24,8 +24,8 @@
         <td>@entry.YearlyDeduction.ToString("C")</td>
         <td>@entry.PaycheckDeduction.ToString("C")</td>
         <td>@entry.Dependents</td>
-        <td><button class="edit-button">Edit</button></td>
-        <td><button class="delete-button">Delete</button></td>
+        <td><a class="edit-button" asp-action="EditDeductionEntry" asp-route-id="@entry.Id">Edit</a></td>
+        <td><a class="delete-button" asp-action="DeleteDeductionEntry" asp-route-id="@entry.Id">Delete</a></td>
       </tr>
     }
   </table>

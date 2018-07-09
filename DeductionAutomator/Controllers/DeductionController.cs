@@ -64,5 +64,19 @@ namespace DeductionAutomator.Controllers
 
       return RedirectToAction("Index");
     }
+
+    public async Task<IActionResult> DeleteDeductionEntry(DeductionEntry existingEntry)
+    {
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+
+      var successful = await _deductionEntryService.DeleteDeductionEntryAsync(existingEntry, currentUser);
+      if (!successful)
+      {
+        return BadRequest("Could not delete item.");
+      }
+
+      return RedirectToAction("Index");
+    }
   }
 }
