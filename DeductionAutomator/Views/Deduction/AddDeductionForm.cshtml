@@ -1,0 +1,15 @@
+@model DeductionEntry
+
+@{
+  ViewData["Title"] = "Add a new employee";
+}
+
+<div>
+  <form asp-action="AddDeductionEntry" asp-controller="Deduction" method="POST">
+    <label asp-for="EmployeeName">Employee Name:</label>
+    <input asp-for="EmployeeName">
+    <label asp-for="Dependents">Dependents:</label>
+    <input asp-for="Dependents">
+    <button type="submit">Add</button>
+  </form> 
+</div>

@@ -40,6 +40,11 @@ namespace DeductionAutomator.Controllers
       return View(model);
     }
 
+    public IActionResult AddDeductionForm()
+    {
+      return View();
+    }
+
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> AddDeductionEntry(DeductionEntry newEntry)
     {
