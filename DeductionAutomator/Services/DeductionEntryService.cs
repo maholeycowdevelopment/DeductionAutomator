@@ -42,6 +42,16 @@ namespace DeductionAutomator.Services
       return saveResult == 1;
     }
 
+    public async Task<bool> UpdateDeductionEntryAsync(DeductionEntry updatedEntry, ApplicationUser user)
+    {
+      _context.Deductions.Remove(_context.Deductions.FirstOrDefault(x => (x.EmployeeName == updatedEntry.EmployeeName)));
+
+      _context.Deductions.Add(updatedEntry);
+
+      var saveResult = await _context.SaveChangesAsync();
+      return saveResult == 1;
+    }
+
     public DeductionEntry GetStudentToUpdate(Guid id)
     {
       var entry = _context.Deductions.FirstOrDefault(x => x.Id == id);

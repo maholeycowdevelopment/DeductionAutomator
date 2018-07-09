@@ -93,5 +93,25 @@ namespace DeductionAutomator.Controllers
       }
       return View(entry);
     }
+
+    public async Task<IActionResult> UpdateDeductionEntry(DeductionEntry updatedEntry)
+    {
+      if (!ModelState.IsValid)
+      {
+        return RedirectToAction("Index");
+      }
+
+      var currentUser = await _userManager.GetUserAsync(User);
+      if (currentUser == null) return Challenge();
+
+      var successful = await _deductionEntryService.UpdateDeductionEntryAsync(updatedEntry, currentUser);
+
+      if (!successful)
+      {
+        return BadRequest("Could not update item.");
+      }
+
+      return RedirectToAction("Index");
+    }
   }
 }

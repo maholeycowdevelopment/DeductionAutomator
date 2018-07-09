@@ -13,6 +13,8 @@ namespace DeductionAutomator.Services
 
     Task<bool> DeleteDeductionEntryAsync(DeductionEntry existingEntry, ApplicationUser user);
 
+    Task<bool> UpdateDeductionEntryAsync(DeductionEntry updatedEntry, ApplicationUser user);
+
     DeductionEntry GetStudentToUpdate(Guid id);
   }
 }
