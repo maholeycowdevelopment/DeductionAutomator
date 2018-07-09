@@ -9,7 +9,7 @@
 
   <table class="table table-hover">
     <thead>
-      <tr>
+      <tr class="table-row">
         <td><strong>Employee Name:</strong></td>
         <td><strong>Yearly Deduction:</strong></td>
         <td><strong>Per Paycheck Deduction:</strong></td>
@@ -19,7 +19,7 @@
 
     @foreach (var entry in Model.Deductions)
     {
-      <tr>
+      <tr class="table-row">
         <td>@entry.EmployeeName</td>
         <td>@entry.YearlyDeduction.ToString("C")</td>
         <td>@entry.PaycheckDeduction.ToString("C")</td>
