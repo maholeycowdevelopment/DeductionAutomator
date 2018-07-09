@@ -78,5 +78,20 @@ namespace DeductionAutomator.Controllers
 
       return RedirectToAction("Index");
     }
+
+    public IActionResult EditDeductionEntry(Guid id)
+    {
+      if (id == null)
+      {
+        return NotFound();
+      }
+
+      var entry = _deductionEntryService.GetStudentToUpdate(id);
+      if (entry == null)
+      {
+        return NotFound();
+      }
+      return View(entry);
+    }
   }
 }

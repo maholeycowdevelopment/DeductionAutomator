@@ -42,6 +42,12 @@ namespace DeductionAutomator.Services
       return saveResult == 1;
     }
 
+    public DeductionEntry GetStudentToUpdate(Guid id)
+    {
+      var entry = _context.Deductions.FirstOrDefault(x => x.Id == id);
+      return entry;
+    }
+
     private float CalculateEmployeeDeduction(string employeeName, string dependents)
     {
       float employeeDeduction = (employeeName.Trim()[0] == 'A') ? 900 : 1000;
