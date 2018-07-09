@@ -12,6 +12,8 @@ namespace DeductionAutomator.Models
 
     public float YearlyDeduction { get; set; }
 
+    public float PaycheckDeduction { get; set; }
+
     public string Dependents { get; set; }
 
     public string UserId { get; set; }

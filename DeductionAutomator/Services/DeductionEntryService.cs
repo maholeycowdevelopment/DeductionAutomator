@@ -26,6 +26,7 @@ namespace DeductionAutomator.Services
     {
       newEntry.Id = Guid.NewGuid();
       newEntry.YearlyDeduction = CalculateEmployeeDeduction(newEntry.EmployeeName, newEntry.Dependents);
+      newEntry.PaycheckDeduction = newEntry.YearlyDeduction / 26;
       newEntry.UserId = user.Id;
 
       _context.Deductions.Add(newEntry);
@@ -34,9 +35,9 @@ namespace DeductionAutomator.Services
       return saveResult == 1;
     }
 
-    private int CalculateEmployeeDeduction(string employeeName, string dependents)
+    private float CalculateEmployeeDeduction(string employeeName, string dependents)
     {
-      int employeeDeduction = (employeeName.Trim()[0] == 'A') ? 900 : 1000;
+      float employeeDeduction = (employeeName.Trim()[0] == 'A') ? 900 : 1000;
 
       if (!dependents.Equals(""))
       {
