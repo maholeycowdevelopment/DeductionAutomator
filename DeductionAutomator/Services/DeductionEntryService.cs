@@ -75,7 +75,7 @@ namespace DeductionAutomator.Services
         string[] dependentsList = dependents.Split(",");
         foreach (string dependentName in dependentsList)
         {
-          employeeDeduction += (NameStartsWithDiscountLetter(employeeName)) ? 450 : 500;
+          employeeDeduction += (NameStartsWithDiscountLetter(dependentName)) ? 450 : 500;
         }
       }
 
