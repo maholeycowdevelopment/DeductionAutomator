@@ -4,12 +4,15 @@
   ViewData["Title"] = "Edit an existing employee";
 }
 
-<div>
-  <form asp-action="UpdateDeductionEntry" asp-controller="Deduction" method="POST">
-    <label asp-for="EmployeeName">Employee Name:</label>
-    <input asp-for="EmployeeName" value="@Model.EmployeeName">
-    <label asp-for="Dependents">Dependents:</label>
-    <input asp-for="Dependents" value="@Model.Dependents">
-    <button type="submit">Update</button>
-  </form> 
+  <div class="row center-content">
+    <div class="col-md-4">
+      <h2>@ViewData["Title"]</h2>
+      <form class="vertical-form" asp-action="UpdateDeductionEntry" asp-controller="Deduction" method="POST">
+        <label asp-for="EmployeeName">Employee Name:</label>
+        <input asp-for="EmployeeName" value="@Model.EmployeeName">
+        <label asp-for="Dependents">Dependents:</label>
+        <input asp-for="Dependents" value="@Model.Dependents">
+        <button type="submit">Update</button>
+      </form> 
+    </div>
 </div>

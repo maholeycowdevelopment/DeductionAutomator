@@ -10,12 +10,6 @@
   padding-right: 15px;
 }
 
-/* Carousel */
-.carousel-caption p {
-  font-size: 20px;
-  line-height: 1.4;
-}
-
 /* QR code generator */
 #qrCode {
   margin: 15px;
@@ -23,10 +17,6 @@
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-  /* Hide captions */
-  .carousel-caption {
-    display: none;
-  }
 }
 
 div.deduction-panel {
@@ -110,3 +100,5 @@ div.deduction-panel {
 .table-row td {
   font-size: 16px;
 }
+
+/* ----- FORM STYLING ----- */

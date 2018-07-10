@@ -4,12 +4,17 @@
   ViewData["Title"] = "Add a new employee";
 }
 
-<div>
-  <form asp-action="AddDeductionEntry" asp-controller="Deduction" method="POST">
-    <label asp-for="EmployeeName">Employee Name:</label>
-    <input asp-for="EmployeeName">
-    <label asp-for="Dependents">Dependents:</label>
-    <input asp-for="Dependents">
-    <button type="submit">Add</button>
-  </form> 
+<div class="row center-content">
+  <div class="col-md-4">
+    <h2>@ViewData["Title"]</h2>
+    <div>
+      <form asp-action="AddDeductionEntry" asp-controller="Deduction" method="POST">
+        <label asp-for="EmployeeName">Employee Name:</label>
+        <input asp-for="EmployeeName">
+        <label asp-for="Dependents">Dependents:</label>
+        <input asp-for="Dependents">
+        <button type="submit">Add</button>
+      </form> 
+    </div>
+  </div>
 </div>
