@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "65a0a2abc700ff2de01f961aceb1a3c1f3ed1b4f"
+    "signature": "065526b8e748ec96727fbafedd2b12735ce9108d"
   },
   "compilationOptions": {
     "defines": [
@@ -23,6 +23,7 @@
     ".NETCoreApp,Version=v2.0": {
       "DeductionAutomator/1.0.0": {
         "dependencies": {
+          "BuildBundlerMinifier": "2.8.391",
           "Microsoft.AspNetCore.All": "2.0.6",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.2",
           "Microsoft.NETCore.App": "2.0.0",
@@ -35,6 +36,7 @@
           "DeductionAutomator.dll": {}
         }
       },
+      "BuildBundlerMinifier/2.8.391": {},
       "Libuv/1.10.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0"
@@ -4237,6 +4239,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "BuildBundlerMinifier/2.8.391": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JvnXAF6e55QKR9t+UcG/kVcWap22fHeKjkUcrJwl2N3vF/NpohuvZlBceqYF9S8aL8xOx6h+PX2plnymc23kiQ==",
+      "path": "buildbundlerminifier/2.8.391",
+      "hashPath": "buildbundlerminifier.2.8.391.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",

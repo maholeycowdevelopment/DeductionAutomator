@@ -4,7 +4,6 @@
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/bin/Debug/netcoreapp2.0/DeductionAutomator.runtimeconfig.dev.json
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/bin/Debug/netcoreapp2.0/DeductionAutomator.dll
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/bin/Debug/netcoreapp2.0/DeductionAutomator.pdb
-/Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/obj/Debug/netcoreapp2.0/DeductionAutomator.csprojResolveAssemblyReference.cache
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/obj/Debug/netcoreapp2.0/DeductionAutomator.csproj.CoreCompileInputs.cache
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/obj/Debug/netcoreapp2.0/UserSecretsAssemblyInfo.cs
 /Users/patrickvanvorce/Documents/DeductionAutomator/DeductionAutomator/DeductionAutomator/obj/Debug/netcoreapp2.0/DeductionAutomator.AssemblyInfoInputs.cache
