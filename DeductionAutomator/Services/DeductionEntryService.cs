@@ -68,18 +68,23 @@ namespace DeductionAutomator.Services
 
     private float CalculateEmployeeDeduction(string employeeName, string dependents)
     {
-      float employeeDeduction = (employeeName.Trim()[0] == 'A') ? 900 : 1000;
+      float employeeDeduction = (NameStartsWithDiscountLetter(employeeName)) ? 900 : 1000;
 
       if (!dependents.Equals(""))
       {
         string[] dependentsList = dependents.Split(",");
         foreach (string dependentName in dependentsList)
         {
-          employeeDeduction += (dependentName.Trim()[0] == 'A') ? 450 : 500;
+          employeeDeduction += (NameStartsWithDiscountLetter(employeeName)) ? 450 : 500;
         }
       }
 
       return employeeDeduction;
+    }
+
+    private bool NameStartsWithDiscountLetter(string name)
+    {
+      return (name.Trim()[0] == 'A' || name.Trim()[0] == 'a') ? true : false;
     }
   }
 }
