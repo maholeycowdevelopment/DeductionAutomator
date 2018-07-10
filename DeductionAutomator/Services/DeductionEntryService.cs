@@ -44,11 +44,19 @@ namespace DeductionAutomator.Services
 
     public async Task<bool> UpdateDeductionEntryAsync(DeductionEntry updatedEntry, ApplicationUser user)
     {
-      _context.Deductions.Remove(_context.Deductions.FirstOrDefault(x => (x.EmployeeName == updatedEntry.EmployeeName)));
+      _context.Deductions.Remove(_context.Deductions.FirstOrDefault(x => (x.UserId == user.Id && x.Id == updatedEntry.Id)));
+      var saveResult = await _context.SaveChangesAsync();
+      if (saveResult != 1)
+      {
+        return false;
+      }
+
+      updatedEntry.YearlyDeduction = CalculateEmployeeDeduction(updatedEntry.EmployeeName, updatedEntry.Dependents);
+      updatedEntry.PaycheckDeduction = updatedEntry.YearlyDeduction / 26;
 
       _context.Deductions.Add(updatedEntry);
 
-      var saveResult = await _context.SaveChangesAsync();
+      saveResult = await _context.SaveChangesAsync();
       return saveResult == 1;
     }
 
